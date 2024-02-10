@@ -1,3 +1,8 @@
+//  GUIForm.h
+//  Project-02
+//
+//  Created by Aquon Bovell on 04/02/2024.
+//  Student ID: 417002174
 #pragma once
 #include <msclr/marshal_cppstd.h>
 
@@ -115,15 +120,17 @@ namespace GUIpng {
 			// 
 			// filePath
 			// 
-			this->filePath->Location = System::Drawing::Point(12, 27);
+			this->filePath->Location = System::Drawing::Point(97, 0);
+			this->filePath->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->filePath->Name = L"filePath";
-			this->filePath->Size = System::Drawing::Size(760, 20);
+			this->filePath->Size = System::Drawing::Size(662, 25);
 			this->filePath->TabIndex = 0;
 			// 
 			// getImageBox
 			// 
 			this->getImageBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->getImageBox->Location = System::Drawing::Point(12, 53);
+			this->getImageBox->Location = System::Drawing::Point(14, 35);
+			this->getImageBox->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->getImageBox->Name = L"getImageBox";
 			this->getImageBox->Size = System::Drawing::Size(300, 300);
 			this->getImageBox->TabIndex = 1;
@@ -137,7 +144,8 @@ namespace GUIpng {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(784, 24);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(7, 3, 0, 3);
+			this->menuStrip1->Size = System::Drawing::Size(772, 25);
 			this->menuStrip1->TabIndex = 4;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -149,7 +157,7 @@ namespace GUIpng {
 					this->quitToolStripMenuItem
 			});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
-			this->fileToolStripMenuItem->Size = System::Drawing::Size(37, 20);
+			this->fileToolStripMenuItem->Size = System::Drawing::Size(37, 19);
 			this->fileToolStripMenuItem->Text = L"File";
 			// 
 			// saveToolStripMenuItem
@@ -191,20 +199,21 @@ namespace GUIpng {
 			// 
 			this->helpToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->aboutToolStripMenuItem });
 			this->helpToolStripMenuItem->Name = L"helpToolStripMenuItem";
-			this->helpToolStripMenuItem->Size = System::Drawing::Size(44, 20);
+			this->helpToolStripMenuItem->Size = System::Drawing::Size(44, 19);
 			this->helpToolStripMenuItem->Text = L"Help";
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(107, 22);
 			this->aboutToolStripMenuItem->Text = L"About";
 			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &GUIForm::aboutToolStripMenuItem_Click);
 			// 
 			// flipHorizontallyBox
 			// 
 			this->flipHorizontallyBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->flipHorizontallyBox->Location = System::Drawing::Point(472, 53);
+			this->flipHorizontallyBox->Location = System::Drawing::Point(459, 35);
+			this->flipHorizontallyBox->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->flipHorizontallyBox->Name = L"flipHorizontallyBox";
 			this->flipHorizontallyBox->Size = System::Drawing::Size(300, 300);
 			this->flipHorizontallyBox->TabIndex = 5;
@@ -213,7 +222,8 @@ namespace GUIpng {
 			// flipVerticallyBox
 			// 
 			this->flipVerticallyBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->flipVerticallyBox->Location = System::Drawing::Point(12, 388);
+			this->flipVerticallyBox->Location = System::Drawing::Point(13, 384);
+			this->flipVerticallyBox->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->flipVerticallyBox->Name = L"flipVerticallyBox";
 			this->flipVerticallyBox->Size = System::Drawing::Size(300, 300);
 			this->flipVerticallyBox->TabIndex = 6;
@@ -222,7 +232,8 @@ namespace GUIpng {
 			// removeGreenAndBlueBox
 			// 
 			this->removeGreenAndBlueBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->removeGreenAndBlueBox->Location = System::Drawing::Point(472, 388);
+			this->removeGreenAndBlueBox->Location = System::Drawing::Point(459, 384);
+			this->removeGreenAndBlueBox->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->removeGreenAndBlueBox->Name = L"removeGreenAndBlueBox";
 			this->removeGreenAndBlueBox->Size = System::Drawing::Size(300, 300);
 			this->removeGreenAndBlueBox->TabIndex = 7;
@@ -230,19 +241,25 @@ namespace GUIpng {
 			// 
 			// getImageBtn
 			// 
-			this->getImageBtn->Location = System::Drawing::Point(117, 359);
+			this->getImageBtn->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->getImageBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI Symbol", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->getImageBtn->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->getImageBtn->Location = System::Drawing::Point(14, 345);
+			this->getImageBtn->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->getImageBtn->Name = L"getImageBtn";
-			this->getImageBtn->Size = System::Drawing::Size(75, 23);
+			this->getImageBtn->Size = System::Drawing::Size(300, 29);
 			this->getImageBtn->TabIndex = 8;
 			this->getImageBtn->Text = L"Get Image";
-			this->getImageBtn->UseVisualStyleBackColor = true;
+			this->getImageBtn->UseVisualStyleBackColor = false;
 			this->getImageBtn->Click += gcnew System::EventHandler(this, &GUIForm::getImageBtn_Click);
 			// 
 			// flipHorizontallyBtn
 			// 
-			this->flipHorizontallyBtn->Location = System::Drawing::Point(573, 359);
+			this->flipHorizontallyBtn->Location = System::Drawing::Point(459, 345);
+			this->flipHorizontallyBtn->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->flipHorizontallyBtn->Name = L"flipHorizontallyBtn";
-			this->flipHorizontallyBtn->Size = System::Drawing::Size(114, 23);
+			this->flipHorizontallyBtn->Size = System::Drawing::Size(300, 29);
 			this->flipHorizontallyBtn->TabIndex = 9;
 			this->flipHorizontallyBtn->Text = L"Flip Horizontally";
 			this->flipHorizontallyBtn->UseVisualStyleBackColor = true;
@@ -250,39 +267,48 @@ namespace GUIpng {
 			// 
 			// flipVerticallyBtn
 			// 
-			this->flipVerticallyBtn->Location = System::Drawing::Point(100, 694);
+			this->flipVerticallyBtn->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->flipVerticallyBtn->ForeColor = System::Drawing::Color::White;
+			this->flipVerticallyBtn->Location = System::Drawing::Point(14, 694);
+			this->flipVerticallyBtn->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->flipVerticallyBtn->Name = L"flipVerticallyBtn";
-			this->flipVerticallyBtn->Size = System::Drawing::Size(121, 23);
+			this->flipVerticallyBtn->Size = System::Drawing::Size(299, 29);
 			this->flipVerticallyBtn->TabIndex = 10;
 			this->flipVerticallyBtn->Text = L"Flip Vertically";
-			this->flipVerticallyBtn->UseVisualStyleBackColor = true;
+			this->flipVerticallyBtn->UseVisualStyleBackColor = false;
 			this->flipVerticallyBtn->Click += gcnew System::EventHandler(this, &GUIForm::flipVerticallyBtn_Click);
 			// 
 			// removeGreenAndBlueBtn
 			// 
-			this->removeGreenAndBlueBtn->Location = System::Drawing::Point(554, 694);
+			this->removeGreenAndBlueBtn->BackColor = System::Drawing::Color::LightCoral;
+			this->removeGreenAndBlueBtn->ForeColor = System::Drawing::Color::DimGray;
+			this->removeGreenAndBlueBtn->Location = System::Drawing::Point(459, 694);
+			this->removeGreenAndBlueBtn->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->removeGreenAndBlueBtn->Name = L"removeGreenAndBlueBtn";
-			this->removeGreenAndBlueBtn->Size = System::Drawing::Size(165, 23);
+			this->removeGreenAndBlueBtn->Size = System::Drawing::Size(300, 29);
 			this->removeGreenAndBlueBtn->TabIndex = 11;
 			this->removeGreenAndBlueBtn->Text = L"Remove Green And Blue Color";
-			this->removeGreenAndBlueBtn->UseVisualStyleBackColor = true;
+			this->removeGreenAndBlueBtn->UseVisualStyleBackColor = false;
 			this->removeGreenAndBlueBtn->Click += gcnew System::EventHandler(this, &GUIForm::removeGreenAndBlueBtn_Click);
 			// 
 			// quitBtn
 			// 
-			this->quitBtn->Location = System::Drawing::Point(697, 723);
+			this->quitBtn->BackColor = System::Drawing::Color::Red;
+			this->quitBtn->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->quitBtn->Location = System::Drawing::Point(344, 694);
+			this->quitBtn->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->quitBtn->Name = L"quitBtn";
-			this->quitBtn->Size = System::Drawing::Size(75, 23);
+			this->quitBtn->Size = System::Drawing::Size(88, 29);
 			this->quitBtn->TabIndex = 12;
-			this->quitBtn->Text = L"quit";
-			this->quitBtn->UseVisualStyleBackColor = true;
+			this->quitBtn->Text = L"Quit";
+			this->quitBtn->UseVisualStyleBackColor = false;
 			this->quitBtn->Click += gcnew System::EventHandler(this, &GUIForm::quitBtn_Click);
 			// 
 			// GUIForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(7, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(784, 749);
+			this->ClientSize = System::Drawing::Size(772, 749);
 			this->Controls->Add(this->quitBtn);
 			this->Controls->Add(this->removeGreenAndBlueBtn);
 			this->Controls->Add(this->flipVerticallyBtn);
@@ -294,8 +320,12 @@ namespace GUIpng {
 			this->Controls->Add(this->getImageBox);
 			this->Controls->Add(this->filePath);
 			this->Controls->Add(this->menuStrip1);
+			this->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"GUIForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"GUIForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->getImageBox))->EndInit();
 			this->menuStrip1->ResumeLayout(false);
@@ -328,12 +358,12 @@ private: System::Void getImageBtn_Click(System::Object^ sender, System::EventArg
 			delete this->flipHorizontallyBox->Image;
 			this->flipHorizontallyBox->Load("pixel.png");
 		}
-		if (flipVerticallyBox->Image != nullptr) {
-			delete flipVerticallyBox->Image;
+		if (this->flipVerticallyBox->Image != nullptr) {
+			delete this->flipVerticallyBox->Image;
 			flipVerticallyBox->Load("pixel.png");
 		}
-		if (removeGreenAndBlueBox->Image != nullptr) {
-			delete removeGreenAndBlueBox->Image;
+		if (this->removeGreenAndBlueBox->Image != nullptr) {
+			delete this->removeGreenAndBlueBox->Image;
 			removeGreenAndBlueBox->Load("pixel.png");
 		}
 	}
@@ -352,12 +382,12 @@ private: System::Void flipHorizontallyBtn_Click(System::Object^ sender, System::
 	source->readfromfile(imgPath);
 	int width = source->getwidth();
 	int height = source->getheight();
-	pngwriter* dest = new pngwriter(width, height, 0, "flippedH.png");
+	pngwriter* dest = new pngwriter(width, height, 0.7, "flippedH.png");
 	 int red, green, blue;
 
-	for (int i = 1; i <= height; i++)
+	for (int i = 1; i <= width; i++)
 	{
-		for (int j = 1; j <= width; j++)
+		for (int j = 1; j <= height; j++)
 		{
 			red = source->read(i, j, 1);
 			green = source->read(i, j, 2);
@@ -385,7 +415,7 @@ private: System::Void flipVerticallyBtn_Click(System::Object^ sender, System::Ev
 	source->readfromfile(imgPath);
 	int width = source->getwidth();
 	int height = source->getheight();
-	pngwriter* dest = new pngwriter(width, height, 0, "flippedV.png");
+	pngwriter* dest = new pngwriter(width, height, 0.7, "flippedV.png");
 	int red, green, blue;
 
 	for (int i = 1; i <= width; i++)
@@ -418,7 +448,7 @@ private: System::Void removeGreenAndBlueBtn_Click(System::Object^ sender, System
 	source->readfromfile(imgPath);
 	int width = source->getwidth();
 	int height = source->getheight();
-	pngwriter* dest = new pngwriter(width, height, 0, "grayScaleWRed.png");
+	pngwriter* dest = new pngwriter(width, height, 0.7, "grayScaleWRed.png");
 	double hue, sat, val , gray;
 
 	for (int i = 1; i <= width; i++)
@@ -428,7 +458,7 @@ private: System::Void removeGreenAndBlueBtn_Click(System::Object^ sender, System
 			hue = source->dreadHSV(i, j, 1);
 			sat = source->dreadHSV(i, j, 2);
 			val = source->dreadHSV(i, j, 3);
-			if (hue > 20.0 / 360.0 && hue < 340.0 / 360.0) {
+			if (hue > 25.0 / 360.0 && hue < 330.0 / 360.0) {
 				gray = source->dread(i, j);
 				dest->plot(i, j, gray, gray, gray);
 			}	
